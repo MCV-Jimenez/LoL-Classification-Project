@@ -25,6 +25,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 ```
 > **Python Libraries for future Machine Learning**
+```
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.compose import make_column_transformer, make_column_selector
@@ -33,6 +34,7 @@ from sklearn.pipeline import make_pipeline
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix, ConfusionMatrixDisplay
 ```
+
 - **Pandas for data manipulation**: Thankfully this dataset came clean and polished for analysis and machine learning. There are no duplicate rows, missing values, inconsistent categories, or incorrect datatypes. 
 ```python
 df.info()
