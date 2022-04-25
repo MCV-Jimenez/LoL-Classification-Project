@@ -17,14 +17,15 @@ In astronomy, stellar classification is the classification of stars based on the
 
 
 #### Methods Used
-> **Python Libaries Used for EDA**
+> All code written in Python
+- **Python Libaries Used for EDA**
 ```
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 ```
-> **Python Libraries for future Machine Learning**
+- **Python Libraries for future Machine Learning**
 ```
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
