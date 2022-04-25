@@ -18,19 +18,18 @@ In astronomy, stellar classification is the classification of stars based on the
 
 #### Methods Used
 > All code written using Python Libraries
-- Pandas for data manipulation: Filling missing values, fixing inconsistent categories. Thankfully this dataset came clean and polished for analysis and machine learning.
+- Pandas for data manipulation: Filling missing values, fixing inconsistent categories. Thankfully this dataset came clean and polished for analysis and machine learning. 
 
 - Exploratory visualizations: Since every feature in this dataset except the class feature consists of numeric data, I relied heavily on violin plot visualizations to analyze the data more in depth.
 - ![Alpha   Delta Violin plots](https://user-images.githubusercontent.com/97704503/165169798-d66f0302-c1b0-4e5d-9054-dda79833d545.png))
 
-- Machine learning prep: Using column transformers and pipelines to format the dataset to be used in Machine Learning
+- Machine learning prep: Using column transformers and pipelines to format the dataset to be used in Machine Learning in the future
 
-- Regression Models: Applying multiple regression models to make sales predictions on the data 
 
 ---
 
 ## References
->Data: [Sales Predictions](https://drive.google.com/file/d/1syH81TVrbBsdymLT_jl2JIf6IjPXtSQw/view)
+>Data: [Stellar Classification](https://www.kaggle.com/datasets/fedesoriano/stellar-classification-dataset-sdss17)
 ---
 
 ## Author Info
