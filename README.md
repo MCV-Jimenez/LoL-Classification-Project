@@ -23,8 +23,6 @@ In astronomy, stellar classification is the classification of stars based on the
 - Exploratory visualizations: Since every feature in this dataset except the class feature consists of numeric data, I relied heavily on seaborn violin plot visualizations to analyze the data more in depth.
 ![Alpha   Delta Violin plots](https://user-images.githubusercontent.com/97704503/165169798-d66f0302-c1b0-4e5d-9054-dda79833d545.png)
 
-- Machine learning prep: Using column transformers and pipelines to format the dataset to be used in Machine Learning in future modeling
-
 
 ---
 
