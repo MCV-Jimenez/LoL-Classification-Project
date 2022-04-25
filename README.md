@@ -15,20 +15,13 @@
 ## Description
 In astronomy, stellar classification is the classification of stars based on their spectral characteristics. The classification scheme of galaxies, quasars, and stars is one of the most fundamental in astronomy. The early cataloguing of stars and their distribution in the sky has led to the understanding that they make up our own galaxy and, following the distinction that Andromeda was a separate galaxy to our own, numerous galaxies began to be surveyed as more powerful telescopes were built. This datasat aims to classificate stars, galaxies, and quasars based on their spectral characteristics.
 
-The Presentation will focus on improving sales through multiple factors:
-
-![download (1)](https://user-images.githubusercontent.com/97704503/161154809-93cc77e3-af1b-4713-9e41-794dc7e6af88.png)
-
-![download](https://user-images.githubusercontent.com/97704503/161154868-9399df6f-a139-4e54-8426-8da150f13307.png)
-
-![download (2)](https://user-images.githubusercontent.com/97704503/161154839-6117f3de-957d-4011-9784-b270566b5975.png)
-
 
 #### Methods Used
-> All code written using Python
-- Pandas for data manipulation: Filling missing values, fixing inconsistent categories
+> All code written using Python Libraries
+- Pandas for data manipulation: Filling missing values, fixing inconsistent categories. Thankfully this dataset came clean and polished for analysis and machine learning.
 
-- Exploratory visualizations: Multiple graph visualizations to analyze the data more in depth and draw conclusions
+- Exploratory visualizations: Since every feature in this dataset except the class feature consists of numeric data, I relied heavily on violin plot visualizations to analyze the data more in depth.
+- ![Project Image]("C:\Users\LP-Ca\OneDrive\Documents\Coding Dojo\Datasets\SDSS Stellar Classification\Alpha & Delta Violin plots.png" )
 
 - Machine learning prep: Using column transformers and pipelines to format the dataset to be used in Machine Learning
 
