@@ -7,7 +7,7 @@
 
 - [Description](#description)
 - [Methods Used](#methods-used)
-- [References](#references)
+- [References](#reference)
 - [Author Info](#author-info)
 
 ---
@@ -46,9 +46,10 @@ df.info()
 - **Exploratory visualizations**: Since every feature in this dataset except the class feature consists of numeric data, I relied heavily on seaborn violin plot visualizations to analyze the data more in depth. Violin plots are very useful for analyzing numeric data. I analyzed the target column with a histogram to check for imbalance in the dataset.
 
 > Target column
+
 ![download](https://user-images.githubusercontent.com/97704503/165180724-a0b0f702-fa1a-4bd4-95e8-cd1d3190c41d.png)
 
-> Alpha: Right Ascension Angle. Astronimical equivalent of 
+> Alpha: Right Ascension Angle. Astronimical equivalent of longitude
 
 > Delta: Declination Angle. Astronimical equivalent of latitude
 
