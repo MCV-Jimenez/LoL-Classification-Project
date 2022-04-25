@@ -17,15 +17,29 @@ In astronomy, stellar classification is the classification of stars based on the
 
 
 #### Methods Used
-> All code written using Python Libraries
-- Pandas for data manipulation: Thankfully this dataset came clean and polished for analysis and machine learning. There are no duplicate rows, missing values, inconsistent categories, or incorrect datatypes. 
+> All code written using Python
+##**Libaries Used**
+```
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.compose import make_column_transformer, make_column_selector
+from sklearn.impute import SimpleImputer
+from sklearn.pipeline import make_pipeline
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import classification_report, confusion_matrix, ConfusionMatrixDisplay
+```
+- **Pandas for data manipulation**: Thankfully this dataset came clean and polished for analysis and machine learning. There are no duplicate rows, missing values, inconsistent categories, or incorrect datatypes. 
 ```python
 df.info()
 ```
 ![df info()](https://user-images.githubusercontent.com/97704503/165173934-c60e3a26-97be-46a2-8309-403766194355.jpg)
 
 
-- Exploratory visualizations: Since every feature in this dataset except the class feature consists of numeric data, I relied heavily on seaborn violin plot visualizations to analyze the data more in depth.
+- **Exploratory visualizations**: Since every feature in this dataset except the class feature consists of numeric data, I relied heavily on seaborn violin plot visualizations to analyze the data more in depth.
 ![Alpha   Delta Violin plots](https://user-images.githubusercontent.com/97704503/165169798-d66f0302-c1b0-4e5d-9054-dda79833d545.png)
 
 
