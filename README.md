@@ -19,20 +19,20 @@ In astronomy, stellar classification is the classification of stars based on the
 #### Methods Used
 > All code written in Python
 - **Python Libaries Used for EDA**
-```
+```python
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 ```
 - **Python Libraries for future Machine Learning**
-```
+```python
 from sklearn.model_selection import train_test_split, GridSearchCV
-from sklearn.preprocessing import StandardScaler, OneHotEncoder
-from sklearn.compose import make_column_transformer, make_column_selector
-from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import StandardScaler, LabelEncoder
 from sklearn.pipeline import make_pipeline
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.decomposition import PCA
+from sklearn.linear_model import LogisticRegression
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import classification_report, confusion_matrix, ConfusionMatrixDisplay
 ```
 
@@ -56,6 +56,82 @@ df.info()
 
 ![Alpha   Delta Violin plots](https://user-images.githubusercontent.com/97704503/165169798-d66f0302-c1b0-4e5d-9054-dda79833d545.png)
 
+- **Machine Learning**: I applied 2 machine learning models to this dataset. A K Neighbors Classifier model, and a Logistic Regression model. I used PCA and GridSearchCV to enhance both models to perform faster and better. In the end I found K Nearest Neighbors to be a slightly better model to apply to this dataset.
+
+> PCA: Principal Component Analysis. The scree plot shows a strong elbow at 3 & 5, so I went with a value of 5 n_components for PCA 
+```python
+# Instantiating Standard Scaler
+scaler = StandardScaler()
+# Fitting and transforming data
+scaled_df = scaler.fit_transform(X)
+# Instantiating & fitting PCA
+pca = PCA()
+pcs = pca.fit_transform(scaled_df)
+```
+```python
+# Plotting the explained variance ratios of the first 9 principal components
+plt.plot(range(1, 10), pca.explained_variance_ratio_, marker = '.')
+plt.xticks(ticks = range(1, 10), fontsize=8)
+plt.xlabel('Principal Component')
+plt.ylabel('Proportion of Explained Variance')
+```
+
+![Scree Plot](https://user-images.githubusercontent.com/97704503/166168817-c2bf15c7-d018-49f4-8798-1a8d9f2ba382.png)
+
+> K Neighbors Classifier w/ PCA & Gridsearch CV performance
+
+```
+KNN Classification Report for Training Set
+              precision    recall  f1-score   support
+
+           0       0.97      0.98      0.97     44584
+           1       0.96      0.99      0.97     16195
+           2       0.97      0.92      0.94     14221
+    accuracy                           0.97     75000
+   macro avg       0.97      0.96      0.96     75000
+weighted avg       0.97      0.97      0.97     75000
+```
+```
+KNN classification Report for Testing Set
+              precision    recall  f1-score   support
+
+           0       0.96      0.96      0.96     14861
+           1       0.94      0.97      0.95      5399
+           2       0.96      0.89      0.92      4740
+
+    accuracy                           0.95     25000
+   macro avg       0.95      0.94      0.95     25000
+weighted avg       0.95      0.95      0.95     25000
+```
+
+> Logistic Regression w/ PCA & GridSearchCV performance
+
+```
+Log Reg classification Report for Training Set
+              precision    recall  f1-score   support
+
+           0       0.95      0.97      0.96     44584
+           1       0.96      1.00      0.98     16195
+           2       0.94      0.86      0.89     14221
+
+    accuracy                           0.95     75000
+   macro avg       0.95      0.94      0.95     75000
+weighted avg       0.95      0.95      0.95     75000
+
+```
+```
+Log Reg classification Report for Testing Set
+              precision    recall  f1-score   support
+
+           0       0.96      0.97      0.96     14861
+           1       0.97      1.00      0.98      5399
+           2       0.94      0.87      0.90      4740
+
+    accuracy                           0.96     25000
+   macro avg       0.95      0.94      0.95     25000
+weighted avg       0.96      0.96      0.96     25000
+
+```
 
 ---
 
